@@ -82,3 +82,8 @@ vsnprintf(content, size + 1, format, arg_ptr);
 //m_len = m_fout.tellp()获取当前文件指针的位置，即文件结尾的位置，同时将该位置的值赋值给变量m_len。这样，m_len就保存了文件的长度（以字节为单位）。
 ```
 
+debug("hello");
+
+#define debug(format, ...) \
+Logger::instance()->log(Logger::DEBUG, __FILE__, __LINE__,format,##__VA_ARGS__)
+//采用宏定义的方式定义此函数，调用单例，format自动识别转换为const char* 类型。
