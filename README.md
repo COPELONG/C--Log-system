@@ -1,5 +1,4 @@
 # C++-Log-system
-# C++-Log-System
 
 ## 需求：
 
