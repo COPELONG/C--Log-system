@@ -90,3 +90,6 @@ Logger::instance()->log(Logger::DEBUG, __FILE__, __LINE__,format,##__VA_ARGS__)
 //采用宏定义的方式定义此函数，调用单例，format自动识别转换为const char* 类型。
 ```
 
+日志回滚操作：
+	
+当输入的数据大于设置好的MAX时，备份旧文件，重命名即可，然后重新打开文件，等于创建了一个新文件，rename（），open（）。
